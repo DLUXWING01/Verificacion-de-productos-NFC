@@ -1,9 +1,9 @@
 // app.js
 
 // Estas variables se llenarán automáticamente con los valores de Vercel
-const AIRTABLE_API_KEY = process.env.AIRTABLE_API_KEY;
-const AIRTABLE_BASE_ID = process.env.AIRTABLE_BASE_ID;
-const AIRTABLE_TABLE_NAME = 'Productos'; // Cambia por el nombre exacto de tu tabla en Airtable
+const TOKENS = process.env.patMzz54AjeOr1fhO.d2ca83b4c1f83301f50d5807a17b1df7d00b8587d6365a397549adfb0bcd3afe;
+const poUVqwNOly6LJp = process.env.poUVqwNOly6LJp;
+const TOKENS = 'Productos'; // Cambia por el nombre exacto de tu tabla en Airtable
 
 // Variable para guardar el número de serie leído del NFC
 let serialNumberLeido = '';
@@ -38,14 +38,14 @@ async function leerNFC() {
 // Función que consulta Airtable usando las variables de entorno
 async function verificarProducto(serialNumber) {
     // Construye la URL de la API de Airtable con tu BASE_ID y TABLE_NAME
-    const url = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${AIRTABLE_TABLE_NAME}?filterByFormula={Serial Number}='${serialNumber}'`;
+    const url = `https://api.airtable.com/v0/${poUVqwNOly6LJp}/${TOKENS}?filterByFormula={Serial Number}='${serialNumber}'`;
     // NOTA: Asegúrate que 'Serial Number' coincida exactamente con el nombre de tu campo en Airtable
 
     try {
         // Hace la petición a la API de Airtable con la API Key en los headers
         const response = await fetch(url, {
             headers: {
-                'Authorization': `Bearer ${AIRTABLE_API_KEY}`
+                'Authorization': `Bearer ${patMzz54AjeOr1fhO.d2ca83b4c1f83301f50d5807a17b1df7d00b8587d6365a397549adfb0bcd3afe}`
             }
         });
 
